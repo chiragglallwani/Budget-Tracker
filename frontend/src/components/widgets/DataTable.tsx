@@ -233,7 +233,7 @@ export default function DataTable({
             className="mt-1"
           />
         </div>
-        <Button variant="outline" onClick={handleResetFilters} className="h-9">
+        <Button variant="theme" onClick={handleResetFilters} className="h-9">
           Reset
         </Button>
       </div>

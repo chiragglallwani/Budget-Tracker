@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { budgetManagementService } from "@/services/FinancialService";
 import type { BudgetManagement } from "@/types/types";
+import { Loader } from "@/components/widgets/Loader";
 
 export default function BudgetManagementView() {
   const [loading, setLoading] = useState(false);
@@ -27,7 +28,7 @@ export default function BudgetManagementView() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (

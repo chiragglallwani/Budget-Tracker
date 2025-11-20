@@ -108,7 +108,7 @@ export default function AuthForm({ type }: AuthFormProps) {
               >
                 Reset
               </Button>
-              <Button type="submit" disabled={isLoading}>
+              <Button variant="theme" type="submit" disabled={isLoading}>
                 {isLoading ? (
                   <>
                     <Loader2 className="h-4 w-4 animate-spin" />

@@ -4,6 +4,7 @@ export const Loader = () => {
   return (
     <div className="flex items-center justify-center h-screen w-full">
       <Spinner />
+      <p className="text-muted-foreground">Loading...</p>
     </div>
   );
 };

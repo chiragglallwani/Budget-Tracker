@@ -5,6 +5,7 @@ import Header from "@/components/widgets/Header";
 import { financialSummaryService } from "@/services/FinancialService";
 import { useEffect, useState } from "react";
 import type { FinancialSummary } from "@/types/types";
+import { Loader } from "@/components/widgets/Loader";
 
 export default function Dashboard() {
   const [loading, setLoading] = useState(false);
@@ -28,7 +29,7 @@ export default function Dashboard() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (
