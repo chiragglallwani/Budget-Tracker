@@ -177,6 +177,7 @@ SIMPLE_JWT = {
 # -------- CORS (allow frontend origin) --------
 CORS_ALLOWED_ORIGINS = [
    'http://localhost:5173',
+   'https://budget-tracker-one-gilt.vercel.app'
 ]
 
 # -------- Email (placeholder; configure for password reset, if used later) --------
