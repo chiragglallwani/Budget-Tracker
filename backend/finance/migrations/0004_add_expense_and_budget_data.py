@@ -38,7 +38,7 @@ class Migration(migrations.Migration):
             (3000.00, 2025, 8, 8, 1, NOW()),
             (3000.00, 2025, 7, 8, 1, NOW()),
             (3000.00, 2025, 6, 8, 1, NOW()),
-            (3000.00, 2025, 5, 8, 1, NOW())
+            (3000.00, 2025, 5, 8, 1, NOW()),
 
             -- Maintenance (category_id: 9) - 7 records
             (6000.00, 2025, 11, 9, 1, NOW()),
@@ -47,7 +47,7 @@ class Migration(migrations.Migration):
             (5500.00, 2025, 8, 9, 1, NOW()),
             (4500.00, 2025, 7, 9, 1, NOW()),
             (4800.00, 2025, 6, 9, 1, NOW()),
-            (5200.00, 2025, 5, 9, 1, NOW())
+            (5200.00, 2025, 5, 9, 1, NOW()),
 
             -- Subscriptions (category_id: 10) - 7 records
             (1000.00, 2025, 11, 10, 1, NOW()),
@@ -56,7 +56,7 @@ class Migration(migrations.Migration):
             (900.00, 2025, 8, 10, 1, NOW()),
             (1000.00, 2025, 7, 10, 1, NOW()),
             (1050.00, 2025, 6, 10, 1, NOW()),
-            (1100.00, 2025, 5, 10, 1, NOW())
+            (1100.00, 2025, 5, 10, 1, NOW()),
 
             -- Petrol Bills (category_id: 11) - 7 records
             (2000.00, 2025, 11, 11, 1, NOW()),
@@ -65,7 +65,7 @@ class Migration(migrations.Migration):
             (2000.00, 2025, 8, 11, 1, NOW()),
             (2000.00, 2025, 7, 11, 1, NOW()),
             (2000.00, 2025, 6, 11, 1, NOW()),
-            (2000.00, 2025, 5, 11, 1, NOW())
+            (2000.00, 2025, 5, 11, 1, NOW()),
 
             -- Fast Foods (category_id: 14) - 7 records
             (500.00, 2025, 11, 14, 1, NOW()),
@@ -74,7 +74,7 @@ class Migration(migrations.Migration):
             (500.00, 2025, 8, 14, 1, NOW()),
             (500.00, 2025, 7, 14, 1, NOW()),
             (500.00, 2025, 6, 14, 1, NOW()),
-            (500.00, 2025, 5, 14, 1, NOW())
+            (500.00, 2025, 5, 14, 1, NOW());
 
             INSERT INTO finance_expense (amount, date, note, category_id, user_id, created_at)
             VALUES
@@ -83,7 +83,7 @@ class Migration(migrations.Migration):
             (3500.00, '2025-05-05', 'Electricity bill for May', 6, 1, NOW()),
             (3800.00, '2025-06-05', 'Electricity bill for June', 6, 1, NOW()),
             (4200.00, '2025-07-05', 'Electricity bill for July', 6, 1, NOW()),
-            (4000.00, '2025-08-05', 'Electricity bill for August', 6, 10, NOW()),
+            (4000.00, '2025-08-05', 'Electricity bill for August', 6, 1, NOW()),
             (3600.00, '2025-09-05', 'Electricity bill for September', 6, 1, NOW()),
             (3400.00, '2025-10-05', 'Electricity bill for October', 6, 1, NOW()),
             (3700.00, '2025-11-05', 'Electricity bill for November', 6, 1, NOW()),
@@ -91,7 +91,7 @@ class Migration(migrations.Migration):
             -- Water Bills (category_id: 7) - 7 records
             (1200.00, '2025-05-10', 'Water bill for May', 7, 1, NOW()),
             (1300.00, '2025-06-10', 'Water bill for June', 7, 1, NOW()),
-            (1250.00, '2025-07-10', 'Water bill for July', 7, 10, NOW()),
+            (1250.00, '2025-07-10', 'Water bill for July', 7, 1, NOW()),
             (1400.00, '2025-08-10', 'Water bill for August', 7, 1, NOW()),
             (1150.00, '2025-09-10', 'Water bill for September', 7, 1, NOW()),
             (1100.00, '2025-10-10', 'Water bill for October', 7, 1,
@@ -101,7 +101,7 @@ class Migration(migrations.Migration):
             (2500.00, '2025-05-15', 'Internet bill for May', 8, 1, NOW()),
             (2500.00, '2025-06-15', 'Internet bill for June', 8, 1, NOW()),
             (2500.00, '2025-07-15', 'Internet bill for July', 8, 1, NOW()),
-            (2500.00, '2025-08-15', 'Internet bill for August', 8, 10, NOW()),
+            (2500.00, '2025-08-15', 'Internet bill for August', 8, 1, NOW()),
             (2500.00, '2025-09-15', 'Internet bill for September', 8, 1, NOW()),
             (2500.00, '2025-10-15', 'Internet bill for October', 8, 1, NOW()),
             (2500.00, '2025-11-15', 'Internet bill for November', 8, 1, NOW()),
@@ -172,11 +172,11 @@ class Migration(migrations.Migration):
             """,
             reverse_sql="""
             DELETE FROM finance_expense 
-            WHERE user_id = 10 
+            WHERE user_id = 1
             AND category_id IN (2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14);
 
             DELETE FROM finance_budget 
-            WHERE user_id = 10 
+            WHERE user_id = 1 
             AND category_id IN (2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14);
             """
         ),
