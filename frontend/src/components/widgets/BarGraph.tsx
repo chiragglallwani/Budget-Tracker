@@ -217,7 +217,6 @@ export default function BarGraph({
   if (data.length === 0) {
     return (
       <div className="w-full h-[400px] bg-gray-200 flex items-center justify-center rounded-md">
-        <h3 className="text-2xl font-bold mb-4">{title}</h3>
         <p className="text-gray-500 text-lg">
           No data available, Add budget and expenses to see the comparison
         </p>

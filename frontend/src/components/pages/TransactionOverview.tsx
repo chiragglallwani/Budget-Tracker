@@ -93,7 +93,8 @@ export default function TransactionOverview() {
           const categoryNames = response.data?.data.map(
             (cat: Transaction) => cat.category
           );
-          setCategories(categoryNames);
+          const uniqueCategories = Array.from(new Set(categoryNames));
+          setCategories(uniqueCategories);
         }
       } catch (err) {
         console.error("Failed to fetch categories:", err);

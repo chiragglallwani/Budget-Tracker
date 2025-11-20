@@ -30,10 +30,6 @@ export default function BudgetManagementView() {
     return <div>Loading...</div>;
   }
 
-  if (!budgets || budgets.length === 0) {
-    return <div>No budgets found</div>;
-  }
-
   return (
     <PageWrapper>
       <Header title="Budget Management" />
