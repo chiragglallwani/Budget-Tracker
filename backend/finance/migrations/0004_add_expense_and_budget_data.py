@@ -94,7 +94,7 @@ class Migration(migrations.Migration):
             (1250.00, '2025-07-10', 'Water bill for July', 7, 1, NOW()),
             (1400.00, '2025-08-10', 'Water bill for August', 7, 1, NOW()),
             (1150.00, '2025-09-10', 'Water bill for September', 7, 1, NOW()),
-            (1100.00, '2025-10-10', 'Water bill for October', 7, 1,
+            (1100.00, '2025-10-10', 'Water bill for October', 7, 1, NOW()),
             (1350.00, '2025-11-10', 'Water bill for November', 7, 1, NOW()),
             
             -- Internet Bills (category_id: 8) - 7 records
